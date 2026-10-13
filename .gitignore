@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment and Local Config
+.env
+.env.local
+.env.*.local
+
+# IDEs & OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/
+
+# Datasets and derived indices (local only)
+CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone/
+CT-KIDNEY-DATASET-Normal-Cyst-Tumor-Stone*/
+kidney_dataset/
+dataset/
+kidneyData.csv
+kidneyData_fixed.csv
+backend/sample_images/
+frontend/public/samples/
+
+# Trained Model Weights and Checkpoints (Large Binary Artifacts)
+*.pth
+*.pt
+backend/models/*.pth
+backend/models/*.pt
+backend/models/image_classifier.joblib
+
+# Local Backup Archives
+*.tar.gz
+*.bundle
+dot_git_backup_clean/
+
+# Temporary generated artifacts & PDFs
+*.bak
+*.tmp*
+temp_image.png
+kidney_analysis_report.pdf
+kidney_classification_report.pdf
+executed_training_notebook.ipynb
+executed_full_training.ipynb

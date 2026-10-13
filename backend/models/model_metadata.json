@@ -1,0 +1,99 @@
+{
+  "application_title": "Kidney CT Image Condition Classification",
+  "supported_classes": [
+    "Cyst",
+    "Normal",
+    "Stone",
+    "Tumor"
+  ],
+  "image_classifier": {
+    "model_type": "RandomForestClassifier (100 estimators, visual feature extraction)",
+    "evaluation": {
+      "accuracy": 0.9916666666666667,
+      "macro_f1": 0.9916643512086691,
+      "train_samples": 480,
+      "test_samples": 120,
+      "classification_report": {
+        "Cyst": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 30.0
+        },
+        "Normal": {
+          "precision": 1.0,
+          "recall": 0.9666666666666667,
+          "f1-score": 0.9830508474576272,
+          "support": 30.0
+        },
+        "Stone": {
+          "precision": 0.967741935483871,
+          "recall": 1.0,
+          "f1-score": 0.9836065573770492,
+          "support": 30.0
+        },
+        "Tumor": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 30.0
+        },
+        "accuracy": 0.9916666666666667,
+        "macro avg": {
+          "precision": 0.9919354838709677,
+          "recall": 0.9916666666666667,
+          "f1-score": 0.9916643512086691,
+          "support": 120.0
+        },
+        "weighted avg": {
+          "precision": 0.9919354838709677,
+          "recall": 0.9916666666666667,
+          "f1-score": 0.9916643512086691,
+          "support": 120.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          30,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          29,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          30,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          30
+        ]
+      ],
+      "feature_count": 31,
+      "feature_description": "31 CT visual density, texture, and calcification features"
+    }
+  },
+  "dataset_metadata_index": {
+    "total_samples": 12446,
+    "train_samples": 9956,
+    "test_samples": 2490,
+    "class_distribution": {
+      "Normal": 5077,
+      "Cyst": 3709,
+      "Tumor": 2283,
+      "Stone": 1377
+    },
+    "audit_note": "Audited: Metadata pipeline operates on dataset identifiers/paths. In this benchmark dataset, image_id contains category prefixes (e.g., 'Normal-', 'Tumor-'). For actual medical CT scans, image pixel inference via the image classifier must be used."
+  },
+  "clinical_clarification": "This application performs anatomical CT finding classification into Normal, Cyst, Stone, and Tumor. It is an educational prototype and does NOT assess clinical Chronic Kidney Disease (CKD) staging.",
+  "updated_at": "2026-10-12T16:40:15.219949+00:00"
+}
